@@ -54,7 +54,7 @@ export const getStaticProps: GetStaticProps<ICategoryProps> = async (
   const { slug } = context.params;
 
   const response = await fetch(
-    `http://localhost:3333/products?category_id=${slug}`
+    `${process.env.NEXT_PUBLIC_API_URL}/products?category_id=${slug}`
   );
   const categories = await response.json();
 
