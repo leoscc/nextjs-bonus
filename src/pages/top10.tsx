@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import { GetStaticProps } from "next";
 
 interface IProduct {
@@ -12,6 +13,8 @@ interface ITop10Props {
 export default function top10({ products }: ITop10Props) {
   return (
     <div>
+      <SEO title="top10" />
+
       <h1>Top 10</h1>
 
       <ul>
